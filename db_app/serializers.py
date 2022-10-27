@@ -6,4 +6,5 @@ from rest_framework import serializers
 class PersonaSerializers(serializers.ModelSerializer):
     class Meta:
         model = Persona
-        fields = '__all__'
+        fields = ('referencia','nombre','descripcion','nuevo','precio')
+        read_only_fields = ('fecha',)

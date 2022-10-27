@@ -5,7 +5,7 @@ from .models import Persona
 from django.http import HttpResponse
 # Create your views here.
 def hola(request):
-    return HttpResponse('<h1>HOLA</h1>')
+    return HttpResponse('<h1>Davis es el mejor</h1>')
 
 class PersonaViewsets(viewsets.ModelViewSet):
     queryset = Persona.objects.all()

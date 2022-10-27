@@ -3,5 +3,8 @@ from django.db import models
 # Create your models here.
 
 class Persona(models.Model):
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
+    referencia = models.CharField(max_length=200)
+    nombre = models.CharField(max_length=200)
+    precio = models.IntegerField()
+    nuevo = models.BooleanField()
+    descripcion = models.TextField()
