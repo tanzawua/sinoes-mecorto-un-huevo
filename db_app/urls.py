@@ -1,12 +1,8 @@
-from django.db import router
-from .views import PersonaViewsets, hola
-from rest_framework import routers, urlpatterns, views
-from django.urls import path, include
-from .views import hola
-router = routers.DefaultRouter()
-router.register('persona', PersonaViewsets)
+from rest_framework import routers
+from .api import ServicioviewSet
 
-urlpatterns = [
-    path('', hola),
-    path('api/', include(router.urls)),
-]
+
+router = routers.DefaultRouter()
+router.register('api/db_app',ServicioviewSet, 'db_app')
+
+urlpatterns = router.urls
