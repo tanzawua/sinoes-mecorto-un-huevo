@@ -1,3 +1,4 @@
+
 from rest_framework import serializers
 
 from .models import Servicio
@@ -5,5 +6,5 @@ from .models import Servicio
 class ServicioSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Servicio
-		fields = ('referencia','nombre','descripcion','nuevo','precio')
+		fields = ('id','referencia','nombre','apellido','precio','nuevo','descripcion','image','fecha')
 		read_only_fields = ('fecha',)
